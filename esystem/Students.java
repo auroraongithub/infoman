@@ -10,6 +10,9 @@ public class Students {
     
     public void SaveRecord(){
         System.out.print("Saved Clicked");
+        ESystem queryConnect = new ESystem();
+        queryConnect.DBConnect();
+        String addQuery = ()
     }
     public void DeleteRecord(){
         System.out.print("Delete Clicked");

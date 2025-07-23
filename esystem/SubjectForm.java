@@ -39,6 +39,10 @@ public class SubjectForm extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        teachMenuItem = new javax.swing.JMenuItem();
+        studentsMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,6 +82,28 @@ public class SubjectForm extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+
+        jMenu1.setText("Forms");
+
+        teachMenuItem.setText("Teachers");
+        teachMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                teachMenuItemActionPerformed(evt);
+            }
+        });
+        jMenu1.add(teachMenuItem);
+
+        studentsMenuItem.setText("Students");
+        studentsMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                studentsMenuItemActionPerformed(evt);
+            }
+        });
+        jMenu1.add(studentsMenuItem);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -140,7 +166,7 @@ public class SubjectForm extends javax.swing.JFrame {
                     .addComponent(jButton1)
                     .addComponent(jButton2)
                     .addComponent(jButton3))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -161,6 +187,16 @@ public class SubjectForm extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void teachMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teachMenuItemActionPerformed
+        TeacherForm teachWindow = new TeacherForm();
+        teachWindow.setVisible(true);
+    }//GEN-LAST:event_teachMenuItemActionPerformed
+
+    private void studentsMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentsMenuItemActionPerformed
+        StudentsForm studWindow = new StudentsForm();
+        studWindow.setVisible(true);
+    }//GEN-LAST:event_studentsMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -209,10 +245,14 @@ public class SubjectForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JMenuItem studentsMenuItem;
+    private javax.swing.JMenuItem teachMenuItem;
     // End of variables declaration//GEN-END:variables
 }
